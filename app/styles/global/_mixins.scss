@@ -1,0 +1,35 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index('#{$string}', $search);
+  @if $index {
+    @return str-slice('#{$string}', 1, $index - 1) + $replace + str-replace(str-slice('#{$string}', $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+@mixin svgIcon($icon_name, $color) {
+  background-image : url('../api/svg.php?svg=#{$icon_name}&c=#{str-replace($color, '#', '%23')}');
+  background-repeat:no-repeat;
+}
+
+@mixin font-smoothing($value: antialiased){
+  @if $value == antialiased{
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin gradient($alpha:1.0) {
+  background-image:linear-gradient(-225deg, rgba(140,199,64,$alpha) 0%, rgba(33,184,184,$alpha) 100%, rgba(33,184,184,$alpha) 100%);
+}

@@ -1,0 +1,64 @@
+i.icon{
+  display:inline-block;
+  background-size:contain;
+  &.icon-arrow{
+    @include svgIcon('icon-arrow--left', $color-black);
+    width: 8px;
+    height: 12.1px;
+  }
+  &.icon-arrow--down{
+    @include svgIcon('icon-arrow--down', $color-black);
+    width: 12.1px;
+    height: 8px;
+  }
+  &.icon-arrow--right{
+    @include svgIcon('icon-arrow--right', $color-black);
+    width: 8px;
+    height: 12.1px;
+  }
+  &.icon-arrows{
+    @include svgIcon('icon-arrows', $color-black);
+    width: 12.1px;
+    height: 17px;
+  }
+  &.icon-check{
+    @include svgIcon('icon-check', $color-freshgreen);
+    width: 24px;
+    height: 18.5px;
+  }
+  &.icon-close{
+    @include svgIcon('icon-close', $color-white);
+    width: 23.3px;
+    height: 23.3px;
+  }
+  &.icon-error{
+    @include svgIcon('icon-error', $color-white);
+    width: 3px;
+    height: 14px;
+  }
+  &.icon-facebook{
+    @include svgIcon('icon-facebook', $color-white);
+    width: 10.8px;
+    height: 20px;
+  }
+  &.icon-twitter{
+    @include svgIcon('icon-twitter', $color-white);
+    width: 24.7px;
+    height: 20px;
+  }
+  &.icon-instagram{
+    @include svgIcon('icon-instagram', $color-white);
+    width: 20px;
+    height: 20px;
+  }
+  &.icon-hamburger{
+    @include svgIcon('icon-hamburger', $color-white);
+    width: 24px;
+    height: 21.5px;
+  }
+  &.icon-mouse{
+    @include svgIcon('icon-mouse', $color-black);
+    width: 22px;
+    height: 34px;
+  }
+}

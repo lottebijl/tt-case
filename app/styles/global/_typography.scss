@@ -1,0 +1,125 @@
+//Text Styles from Styleguide
+.font-black-50{
+  font-family: $font-family;
+  font-weight: $font-black;
+  font-size: rem(50);
+}
+
+.font-black-40{
+  font-family: $font-family;
+  font-weight: $font-black;
+  font-size: rem(40);
+}
+
+.font-black-30{
+  font-family: $font-family;
+  font-weight: $font-black;
+  font-size: rem(30);
+}
+
+.font-light-30{
+  font-family: $font-family;
+  font-weight: $font-light;
+  font-size: rem(30);
+}
+
+.font-light-24{
+  font-family: $font-family;
+  font-weight: $font-light;
+  font-size: rem(24);
+}
+
+.font-black-20{
+  font-family: $font-family;
+  font-weight: $font-black;
+  font-size: rem(20);
+}
+
+.font-light-20{
+  font-family: $font-family;
+  font-weight: $font-light;
+  font-size: rem(20);
+}
+
+.font-regular-18{
+  font-family: $font-family;
+  font-weight: $font-normal;
+  font-size: rem(18);
+}
+
+.font-light-18{
+  font-family: $font-family;
+  font-weight: $font-light;
+  font-size: rem(18);
+}
+
+.font-regular-15{
+  font-family: $font-family;
+  font-weight: $font-normal;
+  font-size: rem(15);
+}
+
+.font-light-15{
+  font-family: $font-family;
+  font-weight: $font-light;
+  font-size: rem(15);
+}
+
+//Text Styles in Visual Design
+.mobilemenu-textstyle{
+  @extend .font-black-50;
+  text-decoration:capitalize;
+}
+
+.navigation-textstyle{
+  @extend .font-regular-18;
+  text-decoration:capitalize;
+}
+
+.clienttitle-textstyle{
+  @extend .font-black-30;
+  text-decoration:uppercase;
+  @include breakpoint(medium){
+    font-size:rem(40);
+  }
+  @include breakpoint(large){
+    font-size:rem(50);
+  }
+}
+
+.headertitle-textstyle{
+  @extend .font-black-20;
+  text-decoration:uppercase;
+  @include breakpoint(medium){
+    font-size:rem(26);
+  }
+  @include breakpoint(large){
+    font-size:rem(36);
+  }
+}
+
+.contenttitle-textstyle{
+  @extend .font-black-20;
+  text-decoration:uppercase;
+  @include breakpoint(medium){
+    font-size:rem(30);
+  }
+}
+
+
+.subtitle-textstyle{
+  @extend .font-light-20;
+  @include breakpoint(medium){
+    font-size:rem(30);
+  }
+
+}
+.paragraph-textstyle{
+  @extend .font-light-15;
+  @include breakpoint(medium){
+    font-size:rem(20);
+  }
+  @include breakpoint(large){
+    font-size:rem(24);
+  }
+}
