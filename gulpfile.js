@@ -58,9 +58,9 @@
       directories.node + '/jquery/dist/jquery.js',
       directories.node + '/magnific-popup/dist/jquery.magnific-popup.js',
       directories.node + '/foundation-sites/dist/js/foundation.js',
-      // directories.node + '/masonry-layout/dist/masonry.pkgd.min.js',
+      directories.node + '/masonry-layout/dist/masonry.pkgd.min.js',
       // directories.node + '/slick-carousel/slick/slick.min.js',
-      // directories.node + '/instafeed.js/instafeed.min.js',
+      directories.node + '/instafeed.js/instafeed.min.js',
       // directories.node + '/video.js/dist/video.min.js',
       // directories.node + '/dropzone/dist/min/dropzone.min.js',
       directories.src + '/scripts/vendor/**/*.js',
@@ -248,7 +248,7 @@ gulp.task('api', function() {
 
   gulp.task('watch', function () {
     gulp.watch(['app/views/modules/**/scss/*.scss', 'app/styles/modules/*.scss', 'app/styles/global/*.scss', paths.styles.src, directories.src + '/scss/*.scss'], ['styling']);
-    gulp.watch([paths.scripts.src, directories.src + '/scripts/*.js'], ['js']);
+    gulp.watch([paths.scripts.src, 'app/scripts/modules/*.js', directories.src + '/scripts/*.js'], ['js']);
     gulp.watch(['app/views/*.handlebars', 'app/views/elements/*.handlebars', 'app/views/modules/*/*.handlebars', 'app/*.php', 'app/*.html'], ['html']);
     gulp.watch([paths.assets.fonts.src], ['assets:fonts']);
     gulp.watch([paths.assets.images.src], ['assets:images']);

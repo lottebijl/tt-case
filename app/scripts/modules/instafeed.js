@@ -14,14 +14,3 @@ var userFeed = new Instafeed({
 userFeed.run();
 
 // https://api.instagram.com/oauth/authorize/?client_id=3f82142d11d34cef993bfb28ed7999bf&redirect_uri=https://github.com/lottebijl/tt-case&response_type=token
-function Masonry(){
-  console.log('masonry function');
-  if ( $( ".instafeed__container" ).length ) {
-    var container = document.querySelector('.instafeed__container');
-    var msnry = new Masonry( container, {
-      itemSelector: '.instafeed__container .columns'
-    });
-  }
-}
-
-
