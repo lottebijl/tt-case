@@ -1,7 +1,6 @@
 <?php
   $compiler = include('compiler.php');
 
-  $data['home'] = 'true';
-
+  $data['title'] = 'Home';
   echo $compiler->render('home', $data);
 ?>
