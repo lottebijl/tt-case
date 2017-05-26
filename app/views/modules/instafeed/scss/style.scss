@@ -1,9 +1,25 @@
-.top-navigation{
-  position:fixed;
-  top:0px;
-  left:0px;
-  height:60px;
-  width:100%;
-  padding:20px;
-  background-color:$color-black;
+.instafeed{
+  background-image:url('../assets/images/bg-forest.jpg');
+  overflow: hidden;
+  .instafeed__title{
+    @extend .contenttitle-textstyle;
+    color:$color-blueishgrey;
+  }
+  .instafeed__link{
+    @extend .subtitle-textstyle;
+    color:$color-white;
+  }
+  .instafeed__item{
+    img{
+      width:100%;
+    }
+    .instafeed__content{
+      background-color:$color-white;
+      padding:15px;
+      p{
+        @extend .font-light-15;
+        color:$color-grey;
+      }
+    }
+  }
 }

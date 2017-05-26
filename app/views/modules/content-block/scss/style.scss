@@ -1,0 +1,11 @@
+.content-block{
+  text-align:center;
+  background-color:$color-white;
+  overflow: hidden;
+  .content-block__title{
+    @extend .contenttitle-textstyle;
+  }
+  p{
+    @extend .paragraph-textstyle;
+  }
+}
