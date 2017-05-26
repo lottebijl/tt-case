@@ -78,7 +78,7 @@
 
 .clienttitle-textstyle{
   @extend .font-black-30;
-  text-decoration:uppercase;
+  text-transform:uppercase;
   @include breakpoint(medium){
     font-size:rem(40);
   }

@@ -61,6 +61,16 @@ i.icon{
     width: 22px;
     height: 34px;
   }
+  &.icon-scrolldown{
+    @include svgIcon('icon-arrows', $color-black);
+    width: 12.1px;
+    height: 17px;
+    @include breakpoint(large){
+      @include svgIcon('icon-mouse', $color-black);
+      width: 22px;
+      height: 34px;
+    }
+  }
   &.icon-tamtam{
     @include svgIcon('logo', $color-white);
     width: 22px;

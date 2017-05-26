@@ -1,11 +1,12 @@
 .mobile-menu{
   position:fixed;
-  top:calc(#{$topnav-height-small} + 2px);
+  z-index:2;
+  top:$topnav-height-small;
   left:0px;
   width:100vw;
   height:100vh;
   @include transform(translateX(-100vw));
-  border-bottom:2px solid $color-white;
+  border-top:2px solid $color-white;
   background-color:$color-black;
   @include transition(all 0.3s ease-in);
   &.open{

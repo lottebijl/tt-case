@@ -6790,7 +6790,7 @@ pre {
   font-weight: 900;
   font-size: 2.5rem; }
 
-.font-black-30, .mobilemenu-textstyle, .mobile-menu .mobile-menu__nav .mobile-menu__list li a, .clienttitle-textstyle {
+.font-black-30, .mobilemenu-textstyle, .mobile-menu .mobile-menu__nav .mobile-menu__list li a, .clienttitle-textstyle, .header-image .header__content .header__title {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 1.875rem; }
@@ -6841,13 +6841,13 @@ pre {
 .navigation-textstyle, .top-navigation .top-navigation__nav .top-navigation__list li a {
   text-decoration: capitalize; }
 
-.clienttitle-textstyle {
-  text-decoration: uppercase; }
+.clienttitle-textstyle, .header-image .header__content .header__title {
+  text-transform: uppercase; }
   @media print, screen and (min-width: 40em) {
-    .clienttitle-textstyle {
+    .clienttitle-textstyle, .header-image .header__content .header__title {
       font-size: 2.5rem; } }
   @media print, screen and (min-width: 64em) {
-    .clienttitle-textstyle {
+    .clienttitle-textstyle, .header-image .header__content .header__title {
       font-size: 3.125rem; } }
 
 .headertitle-textstyle {
@@ -6940,6 +6940,17 @@ i.icon {
     background-repeat: no-repeat;
     width: 22px;
     height: 34px; }
+  i.icon.icon-scrolldown {
+    background-image: url("../api/svg.php?svg=icon-arrows&c=%23000000");
+    background-repeat: no-repeat;
+    width: 12.1px;
+    height: 17px; }
+    @media print, screen and (min-width: 64em) {
+      i.icon.icon-scrolldown {
+        background-image: url("../api/svg.php?svg=icon-mouse&c=%23000000");
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 34px; } }
   i.icon.icon-tamtam {
     background-image: url("../api/svg.php?svg=logo&c=%23ffffff");
     background-repeat: no-repeat;
@@ -6949,6 +6960,111 @@ i.icon {
       i.icon.icon-tamtam {
         width: 32px;
         height: 32px; } }
+
+a.btn {
+  display: inline-block; }
+  a.btn.btn-default {
+    background-color: #000000;
+    color: #ffffff;
+    height: 40px;
+    text-align: center;
+    padding: 0 40px;
+    line-height: 40px;
+    font-size: 15px; }
+    a.btn.btn-default:hover, a.btn.btn-default:focus, a.btn.btn-default:active {
+      background-color: #fd5454; }
+  a.btn.btn-menu {
+    padding: 0px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px; }
+  a.btn.btn-rounded {
+    border-radius: 20px; }
+  a.btn.btn-prev, a.btn.btn-next {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0px; }
+  a.btn.btn-prev i.icon {
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    transform: translateY(1px); }
+  a.btn.btn-next i.icon {
+    -webkit-transform: translateY(1px) translateX(2px);
+    -moz-transform: translateY(1px) translateX(2px);
+    -ms-transform: translateY(1px) translateX(2px);
+    -o-transform: translateY(1px) translateX(2px);
+    transform: translateY(1px) translateX(2px); }
+  a.btn.btn-scrolldown {
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff; }
+    a.btn.btn-scrolldown i.icon.icon-arrow--down {
+      display: none; }
+    a.btn.btn-scrolldown i.icon.icon-scrolldown {
+      -webkit-transform: translateX(1px) translateY(4px);
+      -moz-transform: translateX(1px) translateY(4px);
+      -ms-transform: translateX(1px) translateY(4px);
+      -o-transform: translateX(1px) translateY(4px);
+      transform: translateX(1px) translateY(4px); }
+    a.btn.btn-scrolldown:hover, a.btn.btn-scrolldown:focus, a.btn.btn-scrolldown:active {
+      background-color: #ffffff; }
+      a.btn.btn-scrolldown:hover i.icon-scrolldown, a.btn.btn-scrolldown:focus i.icon-scrolldown, a.btn.btn-scrolldown:active i.icon-scrolldown {
+        background-image: url("../api/svg.php?svg=icon-arrows&c=%23fd5454");
+        background-repeat: no-repeat; }
+    @media print, screen and (min-width: 64em) {
+      a.btn.btn-scrolldown {
+        width: 54px;
+        height: 54px;
+        line-height: 70px; }
+        a.btn.btn-scrolldown:hover i.icon-scrolldown, a.btn.btn-scrolldown:focus i.icon-scrolldown, a.btn.btn-scrolldown:active i.icon-scrolldown {
+          background-image: url("../api/svg.php?svg=icon-mouse&c=%23fd5454");
+          background-repeat: no-repeat; }
+        a.btn.btn-scrolldown i.icon.icon-arrow--down {
+          display: block;
+          margin: 0 auto; } }
+
+.header-image {
+  background-image: url("../assets/images/caseimage-walibi.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media print, screen and (min-width: 40em) {
+    .header-image {
+      margin-top: 80px; } }
+  .header-image .header__content {
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    transform: translateY(-50px); }
+    .header-image .header__content .header__buttons {
+      margin: 0 auto;
+      width: 270px; }
+      .header-image .header__content .header__buttons .btn {
+        float: left; }
+        .header-image .header__content .header__buttons .btn:not(:last-child) {
+          margin-right: 20px; }
+    .header-image .header__content .header__title {
+      text-align: center;
+      margin-bottom: 27px; }
+    .header-image .header__content .btn-rounded {
+      margin: 0 auto;
+      display: block;
+      width: 150px; }
+  .header-image .btn-scrolldown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -20px; }
 
 .top-navigation {
   position: fixed;
@@ -6961,7 +7077,8 @@ i.icon {
 
 .mobile-menu {
   position: fixed;
-  top: calc(60px + 2px);
+  z-index: 2;
+  top: 60px;
   left: 0px;
   width: 100vw;
   height: 100vh;
@@ -6970,7 +7087,7 @@ i.icon {
   -ms-transform: translateX(-100vw);
   -o-transform: translateX(-100vw);
   transform: translateX(-100vw);
-  border-bottom: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
   background-color: #000000;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;

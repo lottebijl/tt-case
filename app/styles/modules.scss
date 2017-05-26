@@ -1,3 +1,45 @@
+.header-image{
+  background-image:url('../assets/images/caseimage-walibi.jpg');
+  background-size:cover;
+  background-position:center;
+  margin-top:$topnav-height-small;
+  height:calc(100vh - #{$topnav-height-small});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(medium){
+    margin-top:$topnav-height-medium;
+  }
+  .header__content{
+    @include transform(translateY(-50px));
+    .header__buttons{
+      margin: 0 auto;
+      width: 270px;
+      .btn{
+        float:left;
+        &:not(:last-child){
+          margin-right:20px;
+        }
+      }
+    }
+    .header__title{
+      @extend .clienttitle-textstyle;
+      text-align: center;
+      margin-bottom: 27px;
+    }
+    .btn-rounded{
+      margin:0 auto;
+      display:block;
+      width:150px;
+    }
+  }
+  .btn-scrolldown{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    margin-left:-20px;
+  }
+}
 .top-navigation{
   position:fixed;
   top:0px;
@@ -9,12 +51,13 @@
 }
 .mobile-menu{
   position:fixed;
-  top:calc(#{$topnav-height-small} + 2px);
+  z-index:2;
+  top:$topnav-height-small;
   left:0px;
   width:100vw;
   height:100vh;
   @include transform(translateX(-100vw));
-  border-bottom:2px solid $color-white;
+  border-top:2px solid $color-white;
   background-color:$color-black;
   @include transition(all 0.3s ease-in);
   &.open{

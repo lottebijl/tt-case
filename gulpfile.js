@@ -162,7 +162,6 @@
   gulp.task('assets:images', function () {
     return gulp.src(paths.assets.images.src)
       .pipe(newer(paths.assets.images.dest))
-      .pipe(image())
       .pipe(gulp.dest(paths.assets.images.dest));
   });
 
