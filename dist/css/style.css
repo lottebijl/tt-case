@@ -6945,6 +6945,10 @@ i.icon {
     background-repeat: no-repeat;
     width: 22px;
     height: 22px; }
+    @media print, screen and (min-width: 40em) {
+      i.icon.icon-tamtam {
+        width: 32px;
+        height: 32px; } }
 
 .top-navigation {
   position: fixed;
@@ -7015,17 +7019,35 @@ i.icon {
   width: 100%;
   padding: 20px;
   background-color: #000000; }
+  @media print, screen and (min-width: 40em) {
+    .top-navigation {
+      height: 80px;
+      padding: 25px 10px 25px 23px; } }
+  @media print, screen and (min-width: 64em) {
+    .top-navigation {
+      padding: 25px 10px 25px 15px; } }
   .top-navigation .btn-menu {
     position: absolute;
     z-index: 1;
     top: 20px;
     left: 20px; }
+    @media print, screen and (min-width: 40em) {
+      .top-navigation .btn-menu {
+        display: none; } }
   .top-navigation .logo {
     display: block;
     margin: 0 auto;
     width: 22px;
     height: 22px; }
+    @media print, screen and (min-width: 40em) {
+      .top-navigation .logo {
+        margin: 0px;
+        width: 32px;
+        height: 32px;
+        float: left; } }
   .top-navigation .top-navigation__nav {
+    float: left;
+    margin-left: 22px;
     display: none; }
     @media print, screen and (min-width: 40em) {
       .top-navigation .top-navigation__nav {
@@ -7034,6 +7056,8 @@ i.icon {
       list-style-type: none; }
       .top-navigation .top-navigation__nav .top-navigation__list li {
         display: inline-block; }
+        .top-navigation .top-navigation__nav .top-navigation__list li:not(:last-child) {
+          margin-right: 35px; }
         .top-navigation .top-navigation__nav .top-navigation__list li a {
           color: #8e8e8e; }
           .top-navigation .top-navigation__nav .top-navigation__list li a:hover, .top-navigation .top-navigation__nav .top-navigation__list li a:focus, .top-navigation .top-navigation__nav .top-navigation__list li a:active, .top-navigation .top-navigation__nav .top-navigation__list li a.active {

@@ -2,23 +2,41 @@
   position:fixed;
   top:0px;
   left:0px;
-  height:$topnav-height-mobile;
+  height:$topnav-height-small;
   width:100%;
   padding:20px;
   background-color:$color-black;
+  @include breakpoint(medium){
+    height:$topnav-height-medium;
+    padding: 25px 10px 25px 23px;
+  }
+  @include breakpoint(large){
+    padding: 25px 10px 25px 15px;
+  }
   .btn-menu{
     position:absolute;
     z-index:1;
     top:20px;
     left:20px;
+    @include breakpoint(medium){
+      display:none;
+    }
   }
   .logo{
     display:block;
     margin:0 auto;
     width: 22px;
     height: 22px;
+    @include breakpoint(medium){
+      margin:0px;
+      width: 32px;
+      height: 32px;
+      float:left;
+    }
   }
   .top-navigation__nav{
+    float:left;
+    margin-left: 22px;
     display:none;
     @include breakpoint(medium){
       display:block;
@@ -27,6 +45,9 @@
       list-style-type:none;
       li{
         display:inline-block;
+        &:not(:last-child){
+          margin-right: 35px;
+        }
         a{
           @extend .navigation-textstyle;
           color:$color-warmgrey;
