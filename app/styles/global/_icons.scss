@@ -61,4 +61,9 @@ i.icon{
     width: 22px;
     height: 34px;
   }
+  &.icon-tamtam{
+    @include svgIcon('logo', $color-white);
+    width: 22px;
+    height: 22px;
+  }
 }

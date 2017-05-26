@@ -2,8 +2,39 @@
   position:fixed;
   top:0px;
   left:0px;
-  height:60px;
+  height:$topnav-height-mobile;
   width:100%;
   padding:20px;
   background-color:$color-black;
+  .btn-menu{
+    position:absolute;
+    z-index:1;
+    top:20px;
+    left:20px;
+  }
+  .logo{
+    display:block;
+    margin:0 auto;
+    width: 22px;
+    height: 22px;
+  }
+  .top-navigation__nav{
+    display:none;
+    @include breakpoint(medium){
+      display:block;
+    }
+    .top-navigation__list{
+      list-style-type:none;
+      li{
+        display:inline-block;
+        a{
+          @extend .navigation-textstyle;
+          color:$color-warmgrey;
+          &:hover, &:focus, &:active, &.active{
+            color:$color-white;
+          }
+        }
+      }
+    }
+  }
 }

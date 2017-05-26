@@ -1,0 +1,32 @@
+.mobile-menu{
+  position:fixed;
+  top:calc(#{$topnav-height-mobile} + 2px);
+  left:0px;
+  width:100vw;
+  height:100vh;
+  @include transform(translateX(-100vw));
+  border-bottom:2px solid $color-white;
+  background-color:$color-black;
+  @include transition(all 0.3s ease-in);
+  &.open{
+    @include transform(translateX(0));
+  }
+  .mobile-menu__nav{
+    .mobile-menu__list{
+      list-style-type:none;
+      margin: 34px 0px 0px 0px;
+      width:100%;
+      li{
+        text-align:center;
+        margin-bottom: 36px;
+        a{
+          @extend .mobilemenu-textstyle;
+          color:$color-white;
+          &:hover, &:focus, &:active, &.active{
+            color:$color-grapefruit;
+          }
+        }
+      }
+    }
+  }
+}

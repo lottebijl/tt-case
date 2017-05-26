@@ -6780,7 +6780,7 @@ pre {
 
 /* Mobile variables */
 /* Animations */
-.font-black-50, .mobilemenu-textstyle {
+.font-black-50 {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 3.125rem; }
@@ -6790,7 +6790,7 @@ pre {
   font-weight: 900;
   font-size: 2.5rem; }
 
-.font-black-30, .clienttitle-textstyle {
+.font-black-30, .mobilemenu-textstyle, .mobile-menu .mobile-menu__nav .mobile-menu__list li a, .clienttitle-textstyle {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 1.875rem; }
@@ -6815,7 +6815,7 @@ pre {
   font-weight: 300;
   font-size: 1.25rem; }
 
-.font-regular-18, .navigation-textstyle {
+.font-regular-18, .navigation-textstyle, .top-navigation .top-navigation__nav .top-navigation__list li a {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.125rem; }
@@ -6835,10 +6835,10 @@ pre {
   font-weight: 300;
   font-size: 0.9375rem; }
 
-.mobilemenu-textstyle {
+.mobilemenu-textstyle, .mobile-menu .mobile-menu__nav .mobile-menu__list li a {
   text-decoration: capitalize; }
 
-.navigation-textstyle {
+.navigation-textstyle, .top-navigation .top-navigation__nav .top-navigation__list li a {
   text-decoration: capitalize; }
 
 .clienttitle-textstyle {
@@ -6940,6 +6940,11 @@ i.icon {
     background-repeat: no-repeat;
     width: 22px;
     height: 34px; }
+  i.icon.icon-tamtam {
+    background-image: url("../api/svg.php?svg=logo&c=%23ffffff");
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px; }
 
 .top-navigation {
   position: fixed;
@@ -6949,6 +6954,40 @@ i.icon {
   width: 100%;
   padding: 20px;
   background-color: #000000; }
+
+.mobile-menu {
+  position: fixed;
+  top: calc(60px + 2px);
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+  transform: translateX(-100vw);
+  border-bottom: 2px solid #ffffff;
+  background-color: #000000;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+  .mobile-menu.open {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  .mobile-menu .mobile-menu__nav .mobile-menu__list {
+    list-style-type: none;
+    margin: 34px 0px 0px 0px;
+    width: 100%; }
+    .mobile-menu .mobile-menu__nav .mobile-menu__list li {
+      text-align: center;
+      margin-bottom: 36px; }
+      .mobile-menu .mobile-menu__nav .mobile-menu__list li a {
+        color: #ffffff; }
+        .mobile-menu .mobile-menu__nav .mobile-menu__list li a:hover, .mobile-menu .mobile-menu__nav .mobile-menu__list li a:focus, .mobile-menu .mobile-menu__nav .mobile-menu__list li a:active, .mobile-menu .mobile-menu__nav .mobile-menu__list li a.active {
+          color: #fd5454; }
 
 .section-styleguide {
   padding: 30px;
@@ -6976,3 +7015,26 @@ i.icon {
   width: 100%;
   padding: 20px;
   background-color: #000000; }
+  .top-navigation .btn-menu {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px; }
+  .top-navigation .logo {
+    display: block;
+    margin: 0 auto;
+    width: 22px;
+    height: 22px; }
+  .top-navigation .top-navigation__nav {
+    display: none; }
+    @media print, screen and (min-width: 40em) {
+      .top-navigation .top-navigation__nav {
+        display: block; } }
+    .top-navigation .top-navigation__nav .top-navigation__list {
+      list-style-type: none; }
+      .top-navigation .top-navigation__nav .top-navigation__list li {
+        display: inline-block; }
+        .top-navigation .top-navigation__nav .top-navigation__list li a {
+          color: #8e8e8e; }
+          .top-navigation .top-navigation__nav .top-navigation__list li a:hover, .top-navigation .top-navigation__nav .top-navigation__list li a:focus, .top-navigation .top-navigation__nav .top-navigation__list li a:active, .top-navigation .top-navigation__nav .top-navigation__list li a.active {
+            color: #ffffff; }
