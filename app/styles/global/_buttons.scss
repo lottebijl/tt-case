@@ -82,6 +82,8 @@ input[type="submit"].btn, a.btn{
     border-radius:20px;
     background-color:$color-grapefruit;
     &:hover, &:focus, &:active{
+      box-shadow:none;
+      outline:0px;
       background-color:$color-salmon;
     }
   }

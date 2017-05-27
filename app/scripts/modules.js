@@ -1,3 +1,4 @@
+$(document).foundation();
 function getInstagramFeed(){
   var accessStr   = window.location.hash.substr(1);
   var accessCode  = accessStr.replace(/access_token=/g,'');

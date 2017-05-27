@@ -7034,12 +7034,19 @@ input[type="submit"].btn, a.btn {
     border-radius: 20px;
     background-color: #fd5454; }
     input[type="submit"].btn.btn-submit:hover, input[type="submit"].btn.btn-submit:focus, input[type="submit"].btn.btn-submit:active, a.btn.btn-submit:hover, a.btn.btn-submit:focus, a.btn.btn-submit:active {
+      box-shadow: none;
+      outline: 0px;
       background-color: #ff7676; }
 
 input[type="text"],
+input[type="text"].is-invalid-input:not(:focus),
 input[type="search"],
+input[type="search"].is-invalid-input:not(:focus),
 input[type="email"],
-textarea {
+input[type="email"].is-invalid-input:not(:focus),
+textarea,
+textarea.is-invalid-input:not(:focus) {
+  background-color: #ffffff;
   font-weight: 300;
   font-size: 18px;
   color: #000000;
@@ -7052,31 +7059,71 @@ textarea {
   line-height: 50px;
   padding: 0 20px; }
   input[type="text"]:-moz-placeholder, input[type="text"]:-ms-input-placeholder, input[type="text"]::-moz-placeholder, input[type="text"]::-webkit-input-placeholder,
+  input[type="text"].is-invalid-input:not(:focus):-moz-placeholder,
+  input[type="text"].is-invalid-input:not(:focus):-ms-input-placeholder,
+  input[type="text"].is-invalid-input:not(:focus)::-moz-placeholder,
+  input[type="text"].is-invalid-input:not(:focus)::-webkit-input-placeholder,
   input[type="search"]:-moz-placeholder,
   input[type="search"]:-ms-input-placeholder,
   input[type="search"]::-moz-placeholder,
   input[type="search"]::-webkit-input-placeholder,
+  input[type="search"].is-invalid-input:not(:focus):-moz-placeholder,
+  input[type="search"].is-invalid-input:not(:focus):-ms-input-placeholder,
+  input[type="search"].is-invalid-input:not(:focus)::-moz-placeholder,
+  input[type="search"].is-invalid-input:not(:focus)::-webkit-input-placeholder,
   input[type="email"]:-moz-placeholder,
   input[type="email"]:-ms-input-placeholder,
   input[type="email"]::-moz-placeholder,
   input[type="email"]::-webkit-input-placeholder,
+  input[type="email"].is-invalid-input:not(:focus):-moz-placeholder,
+  input[type="email"].is-invalid-input:not(:focus):-ms-input-placeholder,
+  input[type="email"].is-invalid-input:not(:focus)::-moz-placeholder,
+  input[type="email"].is-invalid-input:not(:focus)::-webkit-input-placeholder,
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-moz-placeholder,
-  textarea::-webkit-input-placeholder {
+  textarea::-webkit-input-placeholder,
+  textarea.is-invalid-input:not(:focus):-moz-placeholder,
+  textarea.is-invalid-input:not(:focus):-ms-input-placeholder,
+  textarea.is-invalid-input:not(:focus)::-moz-placeholder,
+  textarea.is-invalid-input:not(:focus)::-webkit-input-placeholder {
     color: #8e8e8e; }
   input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active,
+  input[type="text"].is-invalid-input:not(:focus):hover,
+  input[type="text"].is-invalid-input:not(:focus):focus,
+  input[type="text"].is-invalid-input:not(:focus):active,
   input[type="search"]:hover,
   input[type="search"]:focus,
   input[type="search"]:active,
+  input[type="search"].is-invalid-input:not(:focus):hover,
+  input[type="search"].is-invalid-input:not(:focus):focus,
+  input[type="search"].is-invalid-input:not(:focus):active,
   input[type="email"]:hover,
   input[type="email"]:focus,
   input[type="email"]:active,
+  input[type="email"].is-invalid-input:not(:focus):hover,
+  input[type="email"].is-invalid-input:not(:focus):focus,
+  input[type="email"].is-invalid-input:not(:focus):active,
   textarea:hover,
   textarea:focus,
-  textarea:active {
+  textarea:active,
+  textarea.is-invalid-input:not(:focus):hover,
+  textarea.is-invalid-input:not(:focus):focus,
+  textarea.is-invalid-input:not(:focus):active {
     border: 0px; }
     input[type="text"]:hover:-moz-placeholder, input[type="text"]:hover:-ms-input-placeholder, input[type="text"]:hover::-moz-placeholder, input[type="text"]:hover::-webkit-input-placeholder, input[type="text"]:focus:-moz-placeholder, input[type="text"]:focus:-ms-input-placeholder, input[type="text"]:focus::-moz-placeholder, input[type="text"]:focus::-webkit-input-placeholder, input[type="text"]:active:-moz-placeholder, input[type="text"]:active:-ms-input-placeholder, input[type="text"]:active::-moz-placeholder, input[type="text"]:active::-webkit-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):hover:-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):hover:-ms-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):hover::-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):hover::-webkit-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):focus:-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):focus:-ms-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):focus::-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):focus::-webkit-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):active:-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):active:-ms-input-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):active::-moz-placeholder,
+    input[type="text"].is-invalid-input:not(:focus):active::-webkit-input-placeholder,
     input[type="search"]:hover:-moz-placeholder,
     input[type="search"]:hover:-ms-input-placeholder,
     input[type="search"]:hover::-moz-placeholder,
@@ -7089,6 +7136,18 @@ textarea {
     input[type="search"]:active:-ms-input-placeholder,
     input[type="search"]:active::-moz-placeholder,
     input[type="search"]:active::-webkit-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):hover:-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):hover:-ms-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):hover::-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):hover::-webkit-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):focus:-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):focus:-ms-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):focus::-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):focus::-webkit-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):active:-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):active:-ms-input-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):active::-moz-placeholder,
+    input[type="search"].is-invalid-input:not(:focus):active::-webkit-input-placeholder,
     input[type="email"]:hover:-moz-placeholder,
     input[type="email"]:hover:-ms-input-placeholder,
     input[type="email"]:hover::-moz-placeholder,
@@ -7101,6 +7160,18 @@ textarea {
     input[type="email"]:active:-ms-input-placeholder,
     input[type="email"]:active::-moz-placeholder,
     input[type="email"]:active::-webkit-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):hover:-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):hover:-ms-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):hover::-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):hover::-webkit-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):focus:-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):focus:-ms-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):focus::-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):focus::-webkit-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):active:-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):active:-ms-input-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):active::-moz-placeholder,
+    input[type="email"].is-invalid-input:not(:focus):active::-webkit-input-placeholder,
     textarea:hover:-moz-placeholder,
     textarea:hover:-ms-input-placeholder,
     textarea:hover::-moz-placeholder,
@@ -7112,11 +7183,76 @@ textarea {
     textarea:active:-moz-placeholder,
     textarea:active:-ms-input-placeholder,
     textarea:active::-moz-placeholder,
-    textarea:active::-webkit-input-placeholder {
+    textarea:active::-webkit-input-placeholder,
+    textarea.is-invalid-input:not(:focus):hover:-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):hover:-ms-input-placeholder,
+    textarea.is-invalid-input:not(:focus):hover::-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):hover::-webkit-input-placeholder,
+    textarea.is-invalid-input:not(:focus):focus:-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):focus:-ms-input-placeholder,
+    textarea.is-invalid-input:not(:focus):focus::-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):focus::-webkit-input-placeholder,
+    textarea.is-invalid-input:not(:focus):active:-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):active:-ms-input-placeholder,
+    textarea.is-invalid-input:not(:focus):active::-moz-placeholder,
+    textarea.is-invalid-input:not(:focus):active::-webkit-input-placeholder {
       color: #000000; }
 
 textarea {
   height: 120px; }
+
+form .callout.alert {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  width: 100%;
+  height: 80px;
+  text-align: left;
+  border: 0px; }
+  @media print, screen and (min-width: 64em) {
+    form .callout.alert {
+      height: 60px; } }
+  form .callout.alert .icon-error {
+    margin-right: 20px;
+    line-height: 80px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-position: center;
+    background-size: 3px 14px; }
+  form .callout.alert p {
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 25.2px; }
+
+form .form-error {
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  background-color: #555d60;
+  height: 40px;
+  color: #ffffff;
+  text-align: left;
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+  margin: 0px; }
+  form .form-error:before {
+    position: absolute;
+    top: -10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #555d60; }
 
 .contact {
   background-image: url("../assets/images/bg-forest.jpg");
