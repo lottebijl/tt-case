@@ -1,0 +1,30 @@
+.footer{
+  background-color:$color-black;
+  height:100px;
+  width:100%;
+  padding: 40px 0px;
+  .footer__links{
+    margin:0 auto;
+    width:135px;
+    list-style-type:none;
+    li{
+      display:inline-block;
+      &:not(:last-child){
+        margin-right:35px;
+      }
+      a{
+        &:hover{
+          i.icon-facebook{
+            @include svgIcon('icon-facebook', $color-grapefruit);
+          }
+          i.icon-twitter{
+            @include svgIcon('icon-twitter', $color-grapefruit);
+          }
+          i.icon-instagram{
+            @include svgIcon('icon-instagram', $color-grapefruit);
+          }
+        }
+      }
+    }
+  }
+}

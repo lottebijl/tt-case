@@ -1,5 +1,6 @@
 .instafeed{
   background-image:url('../assets/images/bg-forest.jpg');
+  background-size:cover;
   overflow: hidden;
   .instafeed__title{
     @extend .contenttitle-textstyle;

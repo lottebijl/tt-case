@@ -6,7 +6,7 @@ $grid-column-count: 24!default;
 $breakpoint-classes: (small medium large xlarge);
 $grid-column-gutter: (
   small: 5px,
-  medium: 13px,
-  large:30px,
-  xlarge:30px,
+  medium: 5px,
+  large:10px,
+  xlarge:10px,
 ) !default;

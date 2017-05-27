@@ -1,0 +1,38 @@
+.contact{
+  background-image:url('../assets/images/bg-forest.jpg');
+  background-size:cover;
+  overflow: hidden;
+  margin-top:$topnav-height-small;
+  padding-top:40px;
+  padding-bottom: 100px;
+  .contact__title{
+    @extend .headertitle-textstyle;
+    color:$color-white;
+    text-align:center;
+    margin:0 auto;
+    max-width: 200px;
+    @include breakpoint(medium){
+      max-width:380px;
+    }
+  }
+  form.contact__form{
+    margin:0 auto;
+    margin-top: 22px;
+    overflow: hidden;
+    text-align:center;
+    max-width:620px;
+    .contact__fields{
+      background-color:rgba(255,255,255,0.2);
+      padding: 20px 5px;
+      overflow:hidden;
+      margin-bottom:40px;
+      input{
+        margin-bottom:10px;
+      }
+      textarea{
+        margin-top:10px;
+      }
+    }
+  }
+
+}

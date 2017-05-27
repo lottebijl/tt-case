@@ -1,0 +1,34 @@
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea{
+  font-weight: $font-light;
+  font-size: 18px;
+  color: $color-black;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  height:50px;
+  border:0px;
+  outline:0px;
+  box-shadow:none;
+  line-height:50px;
+  padding:0 20px;
+  &:-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::-moz-placeholder,
+  &::-webkit-input-placeholder {
+    color: $color-warmgrey;
+  }
+  &:hover,&:focus, &:active{
+    border:0px;
+    &:-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder {
+      color: $color-black;
+    }
+  }
+}
+textarea{
+  height:120px;
+}

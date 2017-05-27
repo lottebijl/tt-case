@@ -89,7 +89,7 @@
 
 .headertitle-textstyle{
   @extend .font-black-20;
-  text-decoration:uppercase;
+  text-transform:uppercase;
   @include breakpoint(medium){
     font-size:rem(26);
   }
@@ -122,4 +122,8 @@
   @include breakpoint(large){
     font-size:rem(24);
   }
+}
+
+* {
+  @extend .paragraph-textstyle;
 }

@@ -2,11 +2,11 @@
   background-image:url('../assets/images/caseimage-walibi.jpg');
   background-size:cover;
   background-position:center;
-  margin-top:$topnav-height-small;
   height:calc(100vh - #{$topnav-height-small});
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top:$topnav-height-small;
   @include breakpoint(medium){
     margin-top:$topnav-height-medium;
   }

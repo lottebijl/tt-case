@@ -1,4 +1,4 @@
-a.btn{
+input[type="submit"].btn, a.btn{
   display:inline-block;
   &.btn-default{
     background-color:$color-black;
@@ -8,6 +8,8 @@ a.btn{
     padding:0 40px;
     line-height:40px;
     font-size: 15px;
+    border:0px;
+    box-shadow:none;
     &:hover, &:focus, &:active{
       background-color:$color-grapefruit;
     }
@@ -74,5 +76,13 @@ a.btn{
       }
     }
 
+  }
+  &.btn-submit{
+    cursor:pointer;
+    border-radius:20px;
+    background-color:$color-grapefruit;
+    &:hover, &:focus, &:active{
+      background-color:$color-salmon;
+    }
   }
 }
