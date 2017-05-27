@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="25px" height="20px" viewBox="0 0 25 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icons-(1)" transform="translate(-303.000000, -6.000000)" fill-rule="nonzero" fill="#7BDB4C">
+        <g id="icons-(1)" transform="translate(-303.000000, -6.000000)" fill-rule="nonzero" fill="#FF0000">
             <polygon id="Shape" points="311.54 24.805 311.683 24.948 327.335 9.296 324.726 6.688 311.303 20.111 305.943 14.751 303.335 17.359 311.16 25.185 311.54 24.805"></polygon>
         </g>
     </g>

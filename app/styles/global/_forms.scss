@@ -39,6 +39,12 @@ textarea{
 }
 
 form{
+  input, textarea{
+    &.dirty:not(.is-invalid-input){
+      @include svgIcon('icon-check', $color-freshgreen);
+      background-position:top 16px right 16px;
+    }
+  }
   .callout.alert{
     background-color:rgba(0,0,0,0.2);
     padding:15px 20px;
@@ -46,10 +52,10 @@ form{
     height:80px;
     text-align:left;
     border:0px;
-    @include breakpoint(large){
+    @include breakpoint(medium){
       height:60px;
     }
-    .icon-error{
+    .icon-error, .icon-check{
       margin-right:20px;
       line-height:80px;
       width:30px;
@@ -59,6 +65,10 @@ form{
       border-radius:50%;
       background-position:center;
       background-size:3px 14px;
+      &.icon-check{
+        @include svgIcon('icon-check', $color-white);
+        background-size:18px 13.8px;
+      }
     }
     p{
       float:left;

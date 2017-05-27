@@ -7201,6 +7201,11 @@ textarea.is-invalid-input:not(:focus) {
 textarea {
   height: 120px; }
 
+form input.dirty:not(.is-invalid-input), form textarea.dirty:not(.is-invalid-input) {
+  background-image: url("../api/svg.php?svg=icon-check&c=%237bdb4c");
+  background-repeat: no-repeat;
+  background-position: top 16px right 16px; }
+
 form .callout.alert {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 15px 20px;
@@ -7208,10 +7213,10 @@ form .callout.alert {
   height: 80px;
   text-align: left;
   border: 0px; }
-  @media print, screen and (min-width: 64em) {
+  @media print, screen and (min-width: 40em) {
     form .callout.alert {
       height: 60px; } }
-  form .callout.alert .icon-error {
+  form .callout.alert .icon-error, form .callout.alert .icon-check {
     margin-right: 20px;
     line-height: 80px;
     width: 30px;
@@ -7221,6 +7226,10 @@ form .callout.alert {
     border-radius: 50%;
     background-position: center;
     background-size: 3px 14px; }
+    form .callout.alert .icon-error.icon-check, form .callout.alert .icon-check.icon-check {
+      background-image: url("../api/svg.php?svg=icon-check&c=%23ffffff");
+      background-repeat: no-repeat;
+      background-size: 18px 13.8px; }
   form .callout.alert p {
     float: left;
     font-size: 18px;
