@@ -26,11 +26,25 @@
       padding: 20px 5px;
       overflow:hidden;
       margin-bottom:40px;
+      @include transform(translateY(0px));
+      opacity:1;
+      @include transition(all 0.3s ease-in);
+      &.send{
+        @include transform(translateY(-100%));
+        opacity:0;
+      }
       input{
         margin-bottom:10px;
       }
       textarea{
         margin-top:10px;
+      }
+    }
+    .btn-submit{
+      @include transform(scale(1));
+      @include transition(all 0.3s ease-in);
+      &.send{
+        @include transform(scale(0));
       }
     }
   }

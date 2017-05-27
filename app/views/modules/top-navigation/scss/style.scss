@@ -28,6 +28,8 @@
     margin:0 auto;
     width: 22px;
     height: 22px;
+    @include transform(scale(0));
+    opacity:0;
     @include breakpoint(medium){
       margin:0px;
       width: 32px;
@@ -36,6 +38,8 @@
     }
   }
   .top-navigation__nav{
+    @include transform(translate3d(-80px, 0px, 0px));
+    opacity:0;
     float:left;
     margin-left: 22px;
     display:none;

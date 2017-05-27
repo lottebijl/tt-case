@@ -6,8 +6,8 @@ $(".contact__form").on("submit", function(ev) {
 
 $(".contact__form").on("formvalid.zf.abide", function(ev,frm) {
   $('.alert.success').show();
-  $('.contact__fields').hide();
-  $('.btn-submit').hide();
+  $('.contact__fields').addClass('send');
+  $('.btn-submit').addClass('send');
 });
 
 $(".contact__form").on('change', 'input, textarea', function(){
