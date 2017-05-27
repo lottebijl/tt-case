@@ -34,7 +34,8 @@ textarea.is-invalid-input:not(:focus){
     }
   }
 }
-textarea{
+textarea,
+textarea.is-invalid-input:not(:focus){
   height:120px;
 }
 

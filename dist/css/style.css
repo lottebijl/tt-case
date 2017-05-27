@@ -7198,7 +7198,8 @@ textarea.is-invalid-input:not(:focus) {
     textarea.is-invalid-input:not(:focus):active::-webkit-input-placeholder {
       color: #000000; }
 
-textarea {
+textarea,
+textarea.is-invalid-input:not(:focus) {
   height: 120px; }
 
 form input.dirty:not(.is-invalid-input), form textarea.dirty:not(.is-invalid-input) {
@@ -7297,7 +7298,9 @@ form .form-error {
 .content-block {
   text-align: center;
   background-color: #ffffff;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 58px;
+  padding-bottom: 42px; }
 
 .footer {
   background-color: #000000;
@@ -7323,6 +7326,7 @@ form .form-error {
         background-repeat: no-repeat; }
 
 .header-image {
+  position: relative;
   background-image: url("../assets/images/caseimage-walibi.jpg");
   background-size: cover;
   background-position: center;
@@ -7330,10 +7334,20 @@ form .form-error {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   margin-top: 60px; }
   @media print, screen and (min-width: 40em) {
     .header-image {
       margin-top: 80px; } }
+  .header-image:after {
+    content: '';
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    height: 350px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, transparent 100%, transparent 100%);
+    bottom: 0px;
+    z-index: -1; }
   .header-image .header__content {
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
@@ -7363,11 +7377,22 @@ form .form-error {
 .instafeed {
   background-image: url("../assets/images/bg-forest.jpg");
   background-size: cover;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 100px; }
   .instafeed .instafeed__title {
     color: #789199; }
   .instafeed .instafeed__link {
-    color: #ffffff; }
+    color: #ffffff;
+    margin-bottom: 32px;
+    display: block; }
+  .instafeed .btn-default {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
   .instafeed .instafeed__item img {
     width: 100%; }
   .instafeed .instafeed__item .instafeed__content {
@@ -7378,7 +7403,7 @@ form .form-error {
 
 .mobile-menu {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 60px;
   left: 0px;
   width: 100vw;
@@ -7431,6 +7456,7 @@ form .form-error {
 
 .top-navigation {
   position: fixed;
+  z-index: 5;
   top: 0px;
   left: 0px;
   height: 60px;

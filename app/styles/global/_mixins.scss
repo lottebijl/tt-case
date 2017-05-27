@@ -31,5 +31,5 @@
 }
 
 @mixin gradient($alpha:1.0) {
-  background-image:linear-gradient(-225deg, rgba(140,199,64,$alpha) 0%, rgba(33,184,184,$alpha) 100%, rgba(33,184,184,$alpha) 100%);
+  background-image:linear-gradient(0deg, rgba(0,0,0,$alpha) 0%, transparent 100%, transparent 100%);
 }

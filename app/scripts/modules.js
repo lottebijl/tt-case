@@ -37,6 +37,8 @@ function getInstagramFeed(){
         }
     });
     userFeed.run();
+  } else {
+    $('.btn-feed').show();
   }
 }
 

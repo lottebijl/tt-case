@@ -1,4 +1,5 @@
 .header-image{
+  position:relative;
   background-image:url('../assets/images/caseimage-walibi.jpg');
   background-size:cover;
   background-position:center;
@@ -6,9 +7,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index:1;
   margin-top:$topnav-height-small;
   @include breakpoint(medium){
     margin-top:$topnav-height-medium;
+  }
+  &:after{
+    content:'';
+    width:100%;
+    height:350px;
+    position: absolute;
+    height: 350px;
+    @include gradient(0.1);
+    bottom: 0px;
+    z-index: -1;
   }
   .header__content{
     @include transform(translateY(-50px));

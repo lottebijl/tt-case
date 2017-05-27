@@ -2,6 +2,9 @@
   background-image:url('../assets/images/bg-forest.jpg');
   background-size:cover;
   overflow: hidden;
+  text-align:center;
+  padding-top: 58px;
+  padding-bottom: 100px;
   .instafeed__title{
     @extend .contenttitle-textstyle;
     color:$color-blueishgrey;
@@ -9,6 +12,15 @@
   .instafeed__link{
     @extend .subtitle-textstyle;
     color:$color-white;
+    margin-bottom: 32px;
+    display: block;
+  }
+  .btn-default{
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .instafeed__item{
     img{

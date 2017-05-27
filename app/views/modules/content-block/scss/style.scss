@@ -2,6 +2,8 @@
   text-align:center;
   background-color:$color-white;
   overflow: hidden;
+  padding-top: 58px;
+  padding-bottom: 42px;
   .content-block__title{
     @extend .contenttitle-textstyle;
   }
