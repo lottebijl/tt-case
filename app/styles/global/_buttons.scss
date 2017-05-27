@@ -1,4 +1,4 @@
-input[type="submit"].btn, a.btn{
+input[type="submit"].btn, a.btn, button{
   display:inline-block;
   &.btn-default{
     background-color:$color-black;
@@ -23,21 +23,31 @@ input[type="submit"].btn, a.btn{
   &.btn-rounded{
     border-radius:20px;
   }
-  &.btn-prev,&.btn-next{
+  &.btn-prev, &.btn-next, &.slick-arrow{
+    display: block;
+    background-color: $color-black;
+    font-size: 0px;
     border-radius:50%;
     width:40px;
     height:40px;
     padding:0px;
-  }
-  &.btn-prev{
-    i.icon{
-      @include transform(translateY(1px));
+    background-position: center;
+    cursor:pointer;
+    &:hover, &:focus, &:active{
+      box-shadow:none;
+      outline:0px;
+    }
+    &:hover{
+      background-color:$color-grapefruit;
     }
   }
-  &.btn-next{
-    i.icon{
-      @include transform(translateY(1px) translateX(2px));
-    }
+  &.btn-prev, &.slick-prev{
+    @include svgIcon('icon-arrow--left', $color-white);
+    background-size: 8px 12.1px;
+  }
+  &.btn-next, &.slick-next{
+    @include svgIcon('icon-arrow--right', $color-white);
+    background-size: 8px 12.1px;
   }
   &.btn-scrolldown{
     padding:0px;

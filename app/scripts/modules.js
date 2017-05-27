@@ -63,3 +63,9 @@ function Menu(){
 }
 
 Menu();
+
+$('.slick-slider').slick({
+  speed: 300,
+  slidesToShow: 1
+});
+

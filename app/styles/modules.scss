@@ -80,15 +80,6 @@
   }
 }
 .header-image{
-  position:relative;
-  background-image:url('../assets/images/caseimage-walibi.jpg');
-  background-size:cover;
-  background-position:center;
-  height:calc(100vh - #{$topnav-height-small});
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index:1;
   margin-top:$topnav-height-small;
   @include breakpoint(medium){
     margin-top:$topnav-height-medium;
@@ -103,27 +94,45 @@
     bottom: 0px;
     z-index: -1;
   }
-  .header__content{
-    @include transform(translateY(-50px));
-    .header__buttons{
-      margin: 0 auto;
-      width: 270px;
-      .btn{
-        float:left;
-        &:not(:last-child){
-          margin-right:20px;
+  .slick-slider{
+    .slide{
+      .slide__content{
+        width:100vw;
+        height:calc(100vh - #{$topnav-height-small});
+        background-size:cover;
+        background-position:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .header__content{
+          @include transform(translateY(-50px));
+          .btn{
+            margin: 0 auto;
+          }
+          .header__title{
+            @extend .clienttitle-textstyle;
+            text-align: center;
+            margin-bottom: 27px;
+          }
+          .btn-rounded{
+            margin:0 auto;
+            display:block;
+            width:150px;
+          }
         }
       }
     }
-    .header__title{
-      @extend .clienttitle-textstyle;
-      text-align: center;
-      margin-bottom: 27px;
+  }
+  .slick-arrow{
+    position: absolute;
+    z-index: 5;
+    &.slick-prev{
+      top: calc(50% - 15px);
+      left: calc(50% - 135px);
     }
-    .btn-rounded{
-      margin:0 auto;
-      display:block;
-      width:150px;
+    &.slick-next{
+      top: calc(50% - 15px);
+      left: calc(50% + 95px);
     }
   }
   .btn-scrolldown{

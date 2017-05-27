@@ -42,7 +42,7 @@
       directories.node + '/magnific-popup/dist/magnific-popup.css',
       directories.node + '/foundation-sites/dist/css/foundation.css',
       // directories.node + '/video.js/dist/video-js.min.css',
-      // directories.node + '/slick-carousel/slick/slick.css',
+      directories.node + '/slick-carousel/slick/slick.css',
       // directories.node + '/dropzone/dist/dropzone.css'
     ],
     dest: directories.dest + '/css'
@@ -59,7 +59,7 @@
       directories.node + '/magnific-popup/dist/jquery.magnific-popup.js',
       directories.node + '/foundation-sites/dist/js/foundation.js',
       directories.node + '/masonry-layout/dist/masonry.pkgd.min.js',
-      // directories.node + '/slick-carousel/slick/slick.min.js',
+      directories.node + '/slick-carousel/slick/slick.min.js',
       directories.node + '/instafeed.js/instafeed.min.js',
       // directories.node + '/video.js/dist/video.min.js',
       // directories.node + '/dropzone/dist/min/dropzone.min.js',
