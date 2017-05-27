@@ -7494,7 +7494,7 @@ form .form-error {
         width: 150px; }
   .header-image .slick-arrow {
     position: absolute;
-    z-index: 5; }
+    z-index: 4; }
   .header-image .btn-scrolldown {
     position: absolute;
     bottom: 20px;
