@@ -7457,19 +7457,25 @@ form .form-error {
     z-index: -1; }
   .header-image .buttons {
     position: absolute;
+    overflow: hidden;
     width: 266px;
     height: calc(100% - 60px);
     left: calc(50% - 133px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; }
-    .header-image .buttons .btn {
+    align-items: center;
+    -webkit-align-items: center; }
+    .header-image .buttons .buttons__wrapper .btn {
       z-index: 5;
       position: absolute; }
-      .header-image .buttons .btn.btn-prev {
+      .header-image .buttons .buttons__wrapper .btn.btn-prev {
         left: 0px; }
-      .header-image .buttons .btn.btn-next {
+      .header-image .buttons .buttons__wrapper .btn.btn-next {
         right: 0px; }
-      .header-image .buttons .btn.btn-default {
+      .header-image .buttons .buttons__wrapper .btn.btn-default {
         left: 50%;
         width: 150px;
         -webkit-transform: translateX(-75px);
@@ -7483,9 +7489,15 @@ form .form-error {
     height: calc(100vh - 60px);
     background-size: cover;
     background-position: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center; }
     .header-image .slick-slider .slide .slide__content .header__content {
       -webkit-transform: translateY(-75px);
       -moz-transform: translateY(-75px);

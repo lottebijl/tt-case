@@ -110,24 +110,28 @@
   }
   .buttons{
     position:absolute;
+    overflow:hidden;
     width:266px;
     height:calc(100% - 60px);
     left:calc(50% - 133px);
-    display: flex;
+    @include flexbox;
     align-items: center;
-    .btn{
-      z-index:5;
-      position:absolute;
-      &.btn-prev{
-        left:0px;
-      }
-      &.btn-next{
-        right:0px;
-      }
-      &.btn-default{
-        left:50%;
-        width:150px;
-        @include transform(translateX(-75px));
+    -webkit-align-items: center;
+    .buttons__wrapper{
+      .btn{
+        z-index:5;
+        position:absolute;
+        &.btn-prev{
+          left:0px;
+        }
+        &.btn-next{
+          right:0px;
+        }
+        &.btn-default{
+          left:50%;
+          width:150px;
+          @include transform(translateX(-75px));
+        }
       }
     }
   }
@@ -140,9 +144,11 @@
         height:calc(100vh - #{$topnav-height-small});
         background-size:cover;
         background-position:center;
-        display: flex;
+        @include flexbox;
         align-items: center;
+        -webkit-align-items: center;
         justify-content: center;
+        -webkit-justify-content: center;
         .header__content{
           @include transform(translateY(-75px));
           .header__title{
