@@ -21,6 +21,15 @@
     overflow: hidden;
     text-align:center;
     max-width:620px;
+    .alert.success{
+      position:absolute;
+      display:block!important;
+      opacity:0;
+      @include transform(scale(0.8));
+      @include breakpoint(medium){
+        width:620px;
+      }
+    }
     .contact__fields{
       background-color:rgba(255,255,255,0.2);
       padding: 20px 5px;
@@ -28,11 +37,6 @@
       margin-bottom:40px;
       @include transform(translateY(0px));
       opacity:1;
-      @include transition(all 0.3s ease-in);
-      &.send{
-        @include transform(translateY(-100%));
-        opacity:0;
-      }
       input{
         margin-bottom:10px;
       }
@@ -42,10 +46,6 @@
     }
     .btn-submit{
       @include transform(scale(1));
-      @include transition(all 0.3s ease-in);
-      &.send{
-        @include transform(scale(0));
-      }
     }
   }
 
@@ -108,6 +108,30 @@
     bottom: 0px;
     z-index: -1;
   }
+  .buttons{
+    position:absolute;
+    width:266px;
+    height:calc(100% - 60px);
+    left:calc(50% - 133px);
+    display: flex;
+    align-items: center;
+    .btn{
+      z-index:5;
+      position:absolute;
+      &.btn-prev{
+        left:0px;
+      }
+      &.btn-next{
+        right:0px;
+      }
+      &.btn-default{
+        left:50%;
+        width:150px;
+        @include transform(translateX(-75px));
+      }
+    }
+  }
+
   .slick-slider{
     .slide{
       .slide__content{
@@ -120,10 +144,7 @@
         align-items: center;
         justify-content: center;
         .header__content{
-          @include transform(translateY(-50px));
-          .btn{
-            margin: 0 auto;
-          }
+          @include transform(translateY(-75px));
           .header__title{
             @extend .clienttitle-textstyle;
             text-align: center;
@@ -139,18 +160,6 @@
         }
       }
     }
-  }
-  .slick-arrow{
-    position: absolute;
-    z-index: 4;
-    // &.slick-prev{
-    //   top: calc(50% - 15px);
-    //   left: calc(50% - 135px);
-    // }
-    // &.slick-next{
-    //   top: calc(50% - 15px);
-    //   left: calc(50% + 95px);
-    // }
   }
   .btn-scrolldown{
     position:absolute;
@@ -183,19 +192,27 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .instafeed__item{
-    img{
-      width:100%;
-    }
-    .instafeed__content{
-      background-color:$color-white;
-      padding:15px;
-      p{
-        @extend .font-light-15;
-        color:$color-grey;
+  .instafeed__container{
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+    .instafeed__item{
+      margin-bottom:20px;
+      img{
+        width:100%;
+      }
+      .instafeed__content{
+        background-color:$color-white;
+        padding:15px;
+        p{
+          @extend .font-light-15;
+          color:$color-grey;
+          text-align:left;
+        }
       }
     }
   }
+
 }
 .mobile-menu{
   position:fixed;
@@ -297,6 +314,7 @@
   }
   .top-navigation__nav{
     @include transform(translate3d(-80px, 0px, 0px));
+    margin-top:-6px;
     opacity:0;
     float:left;
     margin-left: 22px;

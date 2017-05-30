@@ -39,6 +39,7 @@
   }
   .top-navigation__nav{
     @include transform(translate3d(-80px, 0px, 0px));
+    margin-top:-6px;
     opacity:0;
     float:left;
     margin-left: 22px;

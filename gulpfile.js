@@ -61,8 +61,6 @@
       directories.node + '/masonry-layout/dist/masonry.pkgd.min.js',
       directories.node + '/slick-carousel/slick/slick.min.js',
       directories.node + '/instafeed.js/instafeed.min.js',
-      // directories.node + '/video.js/dist/video.min.js',
-      // directories.node + '/dropzone/dist/min/dropzone.min.js',
       directories.src + '/scripts/vendor/**/*.js',
 
     ],

@@ -22,17 +22,25 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .instafeed__item{
-    img{
-      width:100%;
-    }
-    .instafeed__content{
-      background-color:$color-white;
-      padding:15px;
-      p{
-        @extend .font-light-15;
-        color:$color-grey;
+  .instafeed__container{
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+    .instafeed__item{
+      margin-bottom:20px;
+      img{
+        width:100%;
+      }
+      .instafeed__content{
+        background-color:$color-white;
+        padding:15px;
+        p{
+          @extend .font-light-15;
+          color:$color-grey;
+          text-align:left;
+        }
       }
     }
   }
+
 }
